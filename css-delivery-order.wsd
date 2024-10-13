@@ -1,0 +1,18 @@
+@startuml css_delivery_order
+start
+partition **Delivery Order Process** {
+  :place an order;
+  :check order prepTime;
+  :change order status to in-prep;
+  :dispatch a courier;
+  :a courier arrive in 3 to 15 seconds;
+  while (the order is ready) is (no)
+    :set the courier status as wait;
+    :a courier waits for it to be ready;
+  endwhile (yes)
+    :dispatch a courier to pick up the order;
+    :give an order to a courier waiting first;
+}
+:repeat until no remaining order;
+stop
+@enduml
