@@ -1,4 +1,4 @@
-# CSS Order System
+# Order System
 
 ### How to run code
 1. Go to src/main/kotlin/com/css/assignment/CssAssignmentApplication.kt file and run via Intellij IDEA
